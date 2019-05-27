@@ -1,5 +1,5 @@
 ## Delicious Cake House 電商
-![Image of Yaktocat](https://github.com/music24241/DeliciousCakeHouse/blob/master/music24241.github.io_DeliciousCakeHouse_.png)
+![Image of work](https://github.com/music24241/DeliciousCakeHouse/blob/master/music24241.github.io_DeliciousCakeHouse_.png)
 ### Demo
 [Demo website](https://music24241.github.io/DeliciousCakeHouse/#/)
 ***
