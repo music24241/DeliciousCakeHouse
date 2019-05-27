@@ -21,3 +21,4 @@
 2. vuex
 3. npm套件使用
 4. api串接
+5. bootstrap
