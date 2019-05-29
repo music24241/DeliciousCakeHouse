@@ -80,7 +80,7 @@ export default {
   },
   methods: {
     login () {
-      var vm = this
+      let vm = this
       // vm.isLoading = true
       vm.$store.dispatch('updateLoading', true)
       const api = `${process.env.VUE_APP_API}/admin/signin`

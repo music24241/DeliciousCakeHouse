@@ -38,7 +38,7 @@
             </tbody>
         </table>
 
-        <Pagination :pagination="pagination" v-on:getPageProducts="getCoupon()"/>
+        <Pagination :pagination="pagination" v-on:getCurrentPage="getCoupon()"/>
 
         <!-- modal -->
         <div class="modal fade" id="CouponModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -149,7 +149,7 @@ export default {
       this.coupon = item
     },
     getCoupon (page = 1) {
-      var vm = this
+      let vm = this
       // vm.isLoading = true
       vm.$store.dispatch('updateLoading', true)
       const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/admin/coupons?page=${page}`
@@ -161,9 +161,9 @@ export default {
       })
     },
     submit () {
-      var vm = this
-      var httptype = ''
-      var api = ''
+      let vm = this
+      let httptype = ''
+      let api = ''
       if (vm.mode === 'newData') {
         api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/admin/coupon`
         httptype = 'post'
@@ -171,7 +171,7 @@ export default {
         api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/admin/coupon/${vm.coupon.id}`
         httptype = 'put'
       }
-      var coupon = {
+      let coupon = {
         data: vm.coupon
       }
       this.$http[httptype](api, coupon).then((response) => {
@@ -181,7 +181,7 @@ export default {
       })
     },
     del () {
-      var vm = this
+      let vm = this
       const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/admin/coupon/${vm.coupon.id}`
       this.$http.delete(api).then((response) => {
         vm.coupon = {}

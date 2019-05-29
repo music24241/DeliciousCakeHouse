@@ -39,7 +39,7 @@
             </tbody>
         </table>
         <!-- pagination start-->
-        <Pagination :pagination="pagination" v-on:getPageProducts="getProducts"/>
+        <Pagination :pagination="pagination" v-on:getCurrentPage="getProducts"/>
         <!-- pagination end-->
 
         <!-- new/update modal start -->
@@ -196,7 +196,7 @@ export default {
       $('#productModal').modal('show')
     },
     async updateModal () {
-      var vm = this
+      let vm = this
       let data = vm.tempProduct
       vm.status.disabled = true
       switch (vm.updateMode) {
@@ -221,9 +221,9 @@ export default {
       $('#delProductModal').modal('show')
     },
     uploadFile () {
-      var vm = this
+      let vm = this
       vm.status.uploadFile = true
-      var formData = new FormData()
+      let formData = new FormData()
       formData.append('file-to-upload', this.$refs.files.files[0])
       const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/admin/upload`
       this.$http.post(api, formData, {

@@ -56,7 +56,7 @@
     </table>
 
     <!--Pagination start-->
-    <Pagination :pagination="pagination" v-on:getPageProducts="getOrderList" v-if="status.pagination"/>
+    <Pagination :pagination="pagination" v-on:getCurrentPage="getOrderList" v-if="status.pagination"/>
     <!--Pagination end-->
 
     <!--modal start-->
@@ -176,7 +176,7 @@ export default {
   },
   computed: {
     filterList () {
-      var vm = this
+      let vm = this
       let filter = vm.orderPageList
       vm.status.pagination = true
       if (vm.searchItem === '') return filter

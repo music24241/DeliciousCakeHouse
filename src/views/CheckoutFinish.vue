@@ -80,13 +80,13 @@ export default {
   },
   methods: {
     async getOrder () {
-      var vm = this
+      let vm = this
       await this.getOrderInfo(vm.orderID)
       vm.products = vm.orderInfo.products
       vm.user = vm.orderInfo.user
     },
     copy () {
-      var clipboard = new Clipboard('.orderID')
+      let clipboard = new Clipboard('.orderID')
       this.copyStatus = '可複製'
       clipboard.on('success', e => {
         this.copyStatus = '已複製'

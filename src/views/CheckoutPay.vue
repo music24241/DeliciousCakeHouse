@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     pay () {
-      var vm = this
+      let vm = this
       vm.$validator.validate().then(async function (result) {
         if (result) {
           // 成立訂單

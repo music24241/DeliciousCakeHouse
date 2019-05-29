@@ -92,7 +92,7 @@ export default {
   },
   methods: {
     async addtoCart () {
-      var vm = this
+      let vm = this
       let id = vm.product.id
       let qty = vm.qty
       await this.addToCart({ id, qty })

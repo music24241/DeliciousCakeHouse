@@ -235,7 +235,7 @@ export default {
       this.tempDel = {}
     },
     pay () {
-      var vm = this
+      let vm = this
       vm.$validator.validate().then(result => {
         if (result) {
           vm.$router.push(`/checkout/pay`)

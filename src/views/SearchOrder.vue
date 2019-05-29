@@ -93,7 +93,7 @@ export default {
   },
   methods: {
     async search () {
-      var vm = this
+      let vm = this
       vm.status.search = true
       await this.getOrderInfo(vm.searchItem.trim())
       vm.status.search = false

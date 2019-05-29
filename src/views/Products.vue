@@ -114,7 +114,7 @@ export default {
   },
   methods: {
     countNumber () { // todo 數字顯示錯誤
-      var vm = this
+      let vm = this
       vm.count.all = vm.products.length
       for (let i = 0; i < vm.products.length; i++) {
         switch (vm.products[i].category) {
@@ -137,7 +137,7 @@ export default {
   },
   computed: {
     filterProducts () {
-      var vm = this
+      let vm = this
       if (vm.currentPage === '全部') {
         return vm.products
       } else {

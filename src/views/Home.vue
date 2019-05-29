@@ -75,7 +75,7 @@ function resizeFunction () {
 
 </script>
 
-<style scoped>
+<style>
 body{
   font-family: 微軟正黑體;
 }
